@@ -26,7 +26,7 @@ class KrattPipeline(object):
         TEXT = "siin on pakkumise sisu, mis on saadetud e-aadressile %s" % item['e_mail']
         
         server_ssl = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-        server_ssl.login('arneriso@gmail.com', "bjvojwaifrehpfrh")
+        server_ssl.login('arneriso@gmail.com', "peidetud")
         message = """\From: %s\nTo: %s\nSubject: %s\n\n%s""" % (FROM, TO, SUBJECT, TEXT)
         server_ssl.sendmail(FROM, TO, message)
         server_ssl.close()
